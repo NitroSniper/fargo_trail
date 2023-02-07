@@ -1,0 +1,16 @@
+[package]
+name = "fargo_trail"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# import bevy and all of its default features
+bevy = {version = "0.9.1", features = ["dynamic"]}
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
